@@ -1,2 +1,2 @@
 # proofs
-the Probabilistic ML class of Prof
+the Probabilistic ML 
