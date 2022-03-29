@@ -1,2 +1,63 @@
-#let's go
+(Sum Rule)
+From A + ¬A = E we get
+
+P(A) + P(¬A) = P(E) = 1,
+thus P(A) = 1 − P(¬A).
+And from A = A ∩ (B + ¬B), using the notation P(A, B) = P(A ∩ B) for the
+joint probability of A and B, we get the Sum Rule
+P(A) = P(A, B) + P(A, ¬B).
+------------------------------------------------
+(Conditional Probability)
+If P(A) > 0, the quotient
+P(B | A) =P(A, B)/P(A)
+is called the conditional probability of B given A. It immediately gives
+P(A, B) = P(B | A)P(A) = P(A | B)P(B).
+It is easy to show that P(B | A) ≥ 0 , P(E | A) = 1 , and for B ∩ C = ∅,
+we have P(B + C | A) = P(B | A) + P(C | A) (V). Thus, for a fixed A,
+(E, F, P(· | A)) is a probability space.
+Note that P(A | A) =P(A ∩ A)/P(A)= 1.
+-----------------------------------
+Theorem (Law of Total Probability)
+Let A 1 + A 2 + · · · + A n = E and A i ∩ A j = ∅ if i ̸ = j. Then, for any X ∈ F,
+P(X) = ∑ᵢ‗ן P(X | Aᵢ )P(Aᵢ).
+
+Proof.
+Because X = E ∩ X =Uᵢ‗ן(Aᵢ ∩ X), we get from V that
+P(X) = ∑ᵢ‗ן P(Aᵢ , X) = ∑ᵢ‗ן P(X | Aᵢ )P(Aᵢ).
+---------------------------------------------------
+Theorem (Bayes’ Theorem)
+Let A 1 + A 2 + · · · + A n = E and A i ∩ A j = ∅ if i  != j. 
+Then, for any X ∈ F,
+P(A i | X)=P(A i )P(X | A i ) / ∑j‗ן P(A j )P(X | A j )
+Proof.
+Apply the Sum Rule to the definition of the conditional probability.
+P(x | A) =P(A ∩ x)/P(A).
+P(A ∩ x) = P(x | A)P(A) = P(A | x)P(x).
+P(X) = ∑ᵢ‗ן P(X | Aᵢ )P(Aᵢ).
+then
+P(x | A) =P(A ∩ x)/P(A).
+P(x | A) =P(x | A)P(A) /∑ᵢ‗ן P(X | Aᵢ )P(Aᵢ)
+-----------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
