@@ -1,6 +1,5 @@
 (Sum Rule)
 From A + ¬A = E we get
-
 P(A) + P(¬A) = P(E) = 1,
 thus P(A) = 1 − P(¬A).
 And from A = A ∩ (B + ¬B), using the notation P(A, B) = P(A ∩ B) for the
@@ -12,6 +11,8 @@ If P(A) > 0, the quotient
 P(B | A) =P(A, B)/P(A)
 is called the conditional probability of B given A. It immediately gives
 P(A, B) = P(B | A)P(A) = P(A | B)P(B).
+P(A | B)->likelihood
+P(B)->prior
 It is easy to show that P(B | A) ≥ 0 , P(E | A) = 1 , and for B ∩ C = ∅,
 we have P(B + C | A) = P(B | A) + P(C | A) (V). Thus, for a fixed A,
 (E, F, P(· | A)) is a probability space.
@@ -20,12 +21,13 @@ Note that P(A | A) =P(A ∩ A)/P(A)= 1.
 Theorem (Law of Total Probability)
 Let A 1 + A 2 + · · · + A n = E and A i ∩ A j = ∅ if i ̸ = j. Then, for any X ∈ F,
 P(X) = ∑ᵢ‗ן P(X | Aᵢ )P(Aᵢ).
-
+P(Aᵢ)-> the evidence for the model
+ 
 Proof.
 Because X = E ∩ X =Uᵢ‗ן(Aᵢ ∩ X), we get from V that
 P(X) = ∑ᵢ‗ן P(Aᵢ , X) = ∑ᵢ‗ן P(X | Aᵢ )P(Aᵢ).
 ---------------------------------------------------
-Theorem (Bayes’ Theorem)
+Theorem (Bayes’ Theorem) ("Bayes’ Theorem tells us how to update the belief in a hypothesis X when observing data D.") 
 Let A 1 + A 2 + · · · + A n = E and A i ∩ A j = ∅ if i  != j. 
 Then, for any X ∈ F,
 P(A i | X)=P(A i )P(X | A i ) / ∑j‗ן P(A j )P(X | A j )
@@ -37,10 +39,56 @@ P(X) = ∑ᵢ‗ן P(X | Aᵢ )P(Aᵢ).
 then
 P(x | A) =P(A ∩ x)/P(A).
 P(x | A) =P(x | A)P(A) /∑ᵢ‗ן P(X | Aᵢ )P(Aᵢ)
+▶ P(D | X) is the likelihood of X, but the (conditional) probability for D (given X)
+▶ the model is the entire thing — prior and likelihood.
+▶ despite the name, the prior is P
+not necessarily what you know before seeing the data, but the
+marginal distribution P(X) = d∈D P(X, d) under all possible data.
+▶ in bayesian statistical inference , a perior probability distribution often simply called the prior,of an uncertain quantity is the probability distribution that would express one's belifes about this quantity befor some evidence is tsken into account , the prior could be the probability distribution represinting the the relative proportions of voter who will vpte for a particular politician in a future election. the unknown quantity may be a parameter of the model or a latent variable.
++Priors can be created using a number of methods+
+ A prior can be determined from past information, such as previous        experiments. A prior can be elicited from the purely subjective assessment of an experienced expert. An uninformative prior can be created to reflect a balance among outcomes when no information is available  
 -----------------------------------------------
+           *This extends "deductive" reasoning to "plausible" reasoning*
+            Plausible reasoning extends Boolean Logic
+                              
+From now on A is a propositional variable with values in {0, 1}, P(A) is a function of two possible
+input values A = 1 and A = 0, with slightly unusual notation:
+                  P(A = 1) = probability that formula A is true.
+   P(A = 0) = 1 − P(A = 1) = probability that formula A is false.
+   
+   Stating that P(A, B) = P(A) · P(B) means all of the following
+1*P(A = 1, B = 1) = P(A = 1) · P(B = 1)& 2*P(A = 1, B = 0) = P(A = 1) · P(B = 0)
+3*P(A = 0, B = 1) = P(A = 0) · P(B = 1)& 4*P(A = 0, B = 0) = P(A = 0) · P(B = 0)
 
-
-
+if Two variables A and B are independent::
+  (-In that case P(A|B) = P(A).
+   -Information about B does not give information about A
+    and vice versa.)
+    
+IF Two variables A and B are conditionally independent given variable C
+   ( P(A , B|C) = P(A|C) P(B|C)[a<-c->b]
+     P(A|B, C) = P(A|C) [b->a<-c]
+                               ( 
+                               A = coin 1 shows heads
+                               B = coin 2 shows heads
+                               C = bell rings if both coins show the same result 
+                               )
+                         
+                         
+                         
+                         example[
+                                 P(A, E, B, R) = {P(A | E, B) · P(R | E) · P(E) · P(B)}
+                                 
+                                               = { r <-- e --> a <-- b }
+                                 ]
+                                          
+                               
+   
+   )
+   
+       
+   
+   
 
 
 
