@@ -39,14 +39,15 @@ P(X) = ∑ᵢ‗ן P(X | Aᵢ )P(Aᵢ).
 then
 P(x | A) =P(A ∩ x)/P(A).
 P(x | A) =P(x | A)P(A) /∑ᵢ‗ן P(X | Aᵢ )P(Aᵢ)
-▶ P(D | X) is the likelihood of X, but the (conditional) probability for D (given X)
+▶ P(D | X) is the likelihood of X, but the (conditional) probability for D (given X) IF I HAVE D I CAN GET 'X'
 ▶ the model is the entire thing — prior and likelihood.
 ▶ despite the name, the prior is P
 not necessarily what you know before seeing the data, but the
 marginal distribution P(X) = d∈D P(X, d) under all possible data.
-▶ in bayesian statistical inference , a perior probability distribution often simply called the prior,of an uncertain quantity is the probability distribution that would express one's belifes about this quantity befor some evidence is tsken into account , the prior could be the probability distribution represinting the the relative proportions of voter who will vpte for a particular politician in a future election. the unknown quantity may be a parameter of the model or a latent variable.
+▶ in bayesian statistical inference , a perior probability distribution often simply called the prior,of an uncertain quantity is the probability distribution that would express one's belifes about this quantity befor some evidence is taken into account , the prior could be the probability distribution represinting the the relative proportions of voter who will vote for a particular politician in a future election. the unknown quantity may be a parameter of the model or a latent variable.
 +Priors can be created using a number of methods+
- A prior can be determined from past information, such as previous        experiments. A prior can be elicited from the purely subjective assessment of an experienced expert. An uninformative prior can be created to reflect a balance among outcomes when no information is available  
+ A prior can be determined from past information.
+  A prior can be elicited from the purely subjective assessment of an experienced expert. An uninformative prior can be created to reflect a balance among outcomes when no information is available  
 -----------------------------------------------
            *This extends "deductive" reasoning to "plausible" reasoning*
             Plausible reasoning extends Boolean Logic
@@ -82,11 +83,66 @@ IF Two variables A and B are conditionally independent given variable C
                                                = { r <-- e --> a <-- b }
                                  ]
                                           
-                               
-   
    )
+but what if we want to get probability of discrete variables like a  
+coin has tossed n times p(discrete variables or derived var) that 's  
+difficult ...
+     
+-So we will define to concepts called measurable functions and random variables  
+-Then use them to get probability of derived variables which called "distribution measure '0r' law of random variables"
+----------------
+There are three characteristics of a binomial experiment.
+
+1-
+There are a fixed number of trials . Think of trials as repetitions of an experiment. The letter n denotes the number of trials.
+2-
+There are only two possible outcomes, called “success” and “failure,” for each trial. The letter p denotes the probability of a success on one trial, and q denotes the probability of a failure on one trial. p + q = 1.
+
+3-
+
+The n trials are independent and are repeated using identical conditions. Because the n trials are independent, the outcome of one trial does not help in predicting the outcome of another trial. Another way of saying this is that for each individual trial, the probability, p, of a success and probability, q, of a failure remain the same. For example, randomly guessing at a true-false statistics question has only two outcomes. If a success is guessing correctly, then a failure is guessing incorrectly. Suppose Joe always guesses correctly on any statistics true-false question with probability p = 0.6. Then, q = 0.4. This means that for every true-false statistics question Joe answers, his probability of success (p = 0.6) and his probability of failure (q = 0.4) remain the same.
+    
+    -Any experiment that has characteristics two and three and where n = 1 is called a "Bernoulli" Trial.
+     A binomial experiment takes place when the number of successes is counted in one or more "Bernoulli" Trials.
+    
+let 's g0000............
+ 
+▶ original space: Ω = {0; 1}**N  (countably finite)
+▶ σ-algebra: 2**Ω (the power set)
+▶ random variable R = ∑ᵢ‗ן Xᵢ ∈ [0, . . . , N] =: Γ ⊂ N.
+▶ distribution (measure) / law of Random variable: …
+P(r | f, N) = (# ways to choose r from N) · f**r · (1 − f)**N−r
+P(r | f, N) =[N!/[(N − r)! · (r!)]]*[(f**r) * ((1 − f)**N−r)]
+ ------
+ Definition (σ-algebra, measurable sets & spaces)
+Let Ω be a space of elementary events. Consider
+the power set 2**Ω , and let F ⊂ 2**Ω be a set of
+subsets of Ω. Elements of F are called random
+events. If F satisfies the following properties, it is
+called a σ-algebra.
+1. Ω ∈ F                                         II.
+2. (A, B ∈ F) ⇒ (A − B ∈ F)                       I.
+3. (A1 , A 2 , · · · ∈ F) ⇒( Uᵢ‗ן Aᵢ  ∈ F ∧ ∩ᵢ‗ן Aᵢ ∈ F)
+
+(this implies ∅ ∈ F. If F is a σ-algebra, its
+elements are called measurable sets, and (Ω, F)
+is called a measurable space (or Borel space).
+-----------
+  Definition (Topology)
+Let Ω be a space and τ be a collection of sets. We
+say τ is a topology on Ω if
+▶ Ω ∈ τ , and ∅ ∈ τ
+▶ any union of elements of τ is in τ
+▶ any intersection of finitely many elements of
+τ is in τ .
+The elements of the topology τ are called open
+sets. In the Euclidean vector space R d , the
+canonical topology is that of all sets U that satisfy
+x ∈ U :⇒ ∃ε > 0 : ((ky − xk11 < ε) ⇒ (y ∈ U)).
+
+   --------------------------
    
-       
+   
    
    
 
